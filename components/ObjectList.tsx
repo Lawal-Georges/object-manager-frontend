@@ -13,7 +13,7 @@ interface ObjectListProps {
     viewMode?: 'grid' | 'list';
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://object-manager-backend.vercel.app/';
 
 export default function ObjectList({ onObjectSelect, viewMode = 'grid' }: ObjectListProps) {
     const [objects, setObjects] = useState<ObjectItem[]>([]);
