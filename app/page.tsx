@@ -45,7 +45,7 @@ export default function Home() {
                     const controller = new AbortController();
                     const timeoutId = setTimeout(() => controller.abort(), 5000);
 
-                    const response = await fetch(`https://object-manager-backend.vercel.app/${endpoint.url}`, {
+                    const response = await fetch(`https://object-manager-backend.vercel.app${endpoint.url}`, {
                         method: 'GET',
                         signal: controller.signal,
                         mode: 'cors',
@@ -181,7 +181,7 @@ export default function Home() {
                             <div>
                                 <h3 className="font-medium text-red-800">API non accessible</h3>
                                 <p className="text-sm text-red-600 mt-1">
-                                    Vérifiez que le backend est en cours d&apos;exécution sur http://localhost:3001
+                                    Vérifiez que le backend est en cours d&apos;exécution sur https://object-manager-backend.vercel.app/
                                 </p>
                                 <Button
                                     variant="outline"
